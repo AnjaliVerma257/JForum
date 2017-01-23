@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="../css/dashboard.css" media="all" type="text/css">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Send New Message</title>
+
+<script>
+function changeLocation() {
+          window.location.href = '../jsp/logout.jsp';
+}
+function branchsMsg() { 
+
+          window.location.href = '../jsp/smessages.jsp?mese=0';
+}
+function branchrMsg() { 
+
+          window.location.href = '../jsp/rmessages.jsp?mese=0';
+}
+function branchsToForum()
+{
+    window.location.href='../jsp/forum.jsp';
+}
+ 
+</script>
+</head>
+<body class="body-bg" link="#000000" vlink="#000000" alink="#000000">
+   
+
+<div id="header" >
+    <a href="../jsp/logout.jsp" onclick='javascript:changeLocation();'class="logout_btn">Logout</a>    
+    
+    <div class="navbar">
+    <ul>
+        <li><a href="dashboard.html">Home</a></li>
+        <li>
+            <a href="dashboard.html">Resources</a>
+            <ul>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">PDF's</a></li>
+            </ul>
+        </li>      
+        
+        <li>
+            <a href="resouces.html">Settings</a>
+            <ul>
+                <li><a href="#" style='width:200px;'>Change Password</a></li>
+                <li><a href="#" style='width:200px;'>Account Details</a></li>
+                <li><a href="#" style='width:200px;'>Change E-mail-Id</a></li>
+                <li><a href="#" style='width:200px;'>Change Security Question</a></li>
+                <li><a href="#" style='width:200px;'>Delete Account</a></li>
+            </ul>
+        </li>           
+        <li><a href="#">Test</a>
+            <ul>
+                <li><a href="#">Take Test</a></li>
+                <li><a href="#">View Score</a></li>
+                <li><a href="#">Previous Score</a></li>
+            </ul>
+        </li>
+    </ul>
+    </div>
+    
+</div>
+    
+<div id="sidebar">
+    <h3 class="sidebar_title">Title</h3>
+    <ul>
+        <li><a href="nmessage.html">Send New Message</a></li>
+        <li><a href="../jsp/rmessages.jsp?mese=0" onclick='javascript:branchrMsg();'>Recieved Messages</a></li>
+    </ul>
+    <h3 class="sidebar_title">Title</h3>
+    <ul>
+        <li><a href="../jsp/smessages.jsp?mese=0" onclick='javascript:branchsMsg();'> Sent Messages</a></li>
+        <li><a href="createforum.html">Create New Forum</a></li>
+        <li><a href="../jsp/forum.jsp" onclick='javascript:branchsToForum();'>Forums</a></li>
+    </ul>
+    <h3 class="sidebar_title">Title</h3>
+    <ul>
+        <li><a href="creategroup.html">Create New Group</a></li>
+        <li><a href="group.html">Groups</a></li>
+    </ul>
+</div>
+
+<div id="page">    
+       
+    <div id="main_partition">
+        <div class='small_div'>
+            <h3>Send New Message</h3>
+            <div class='msgbox'>
+                <form method="post" action='../jsp/nmessages.jsp'>
+                    <div class="field">
+                    <label>Send To:</label>
+                    <input type="text" value="Enter the username" name="mail" class="usrname" onclick="if(this.value=='Enter the username'){this.value=''}" >
+                    </div>
+                    
+                    <div class="field">
+                    <label>Message:</label>
+                    <textarea value="Type the message here" name="content" class='msgbox' onclick="if(this.value=='Enter the username'){this.value=''}"></textarea>
+                    </div>
+                    
+                    <div class="field">
+                        <input type='submit' name='b3' value="Send Message" class='submit_btn'>
+                        <button class='submit_btn'>Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>    
+    
+</body>
+</html>

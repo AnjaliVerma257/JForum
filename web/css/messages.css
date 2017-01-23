@@ -1,0 +1,96 @@
+﻿body, html {
+	margin: 0 0;
+	padding: 1 1;
+
+}
+.body-bg
+{
+	background:url('../images/background.jpg');
+	visibility:visible;
+	background-position:center;
+	background-repeat:repeat-y;
+	z-index:1;
+	height:100%;
+	width:100%;
+	
+	
+	
+}
+
+
+
+#header1
+{
+width:1340px;
+height:150px;
+z-index:10;
+position:absolute;
+background:black;
+
+margin-left:5px;
+margin-top:5px;
+margin-right:5px;
+
+
+
+
+}
+
+
+
+#main_partition
+{
+width:1100px;
+height:510px;
+background-color:#DDD288;
+margin-left:225px;
+margin-top:165px;
+position:absolute;
+z-index:39;
+}
+
+
+.small_div
+{
+width:420px;
+margin-left:25px;
+margin-top:5px;
+height:500px;	
+z-index:40;
+background-color:olive;	
+position:absolute;
+}
+
+.small_div1
+{
+width:420px;
+margin-left:640px;
+margin-top:5px;
+height:500px;	
+z-index:40;
+background-color:olive;	
+position:absolute;
+}
+
+
+#sidebar
+{
+		margin-top:5px;
+		margin-left:5px;
+		margin-bottom:5px;
+		
+		border:thick;
+		border-color:black;
+		border-width:thick;
+		
+
+	width:200px;
+	height:665px;
+	background: white;
+	position:fixed;
+		z-index:9;
+		
+		
+	
+	
+}

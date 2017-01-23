@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/dashboard.css" media="all" type="text/css">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>
+   Account Settings
+</title>
+<script>
+    function err()
+    {
+        var a=document.location.toString();
+        c=a.length;
+        var b=a.substring(c-2);
+        if(b=="sq")
+     alert("Security question and answer successfully");
+      else if(b=="q1")
+          alert("Error: Application not able to change security details");
+      else if(b=="ms")
+       alert("Email ID successfully changed");
+   else if(b=="mu")
+       alert("System not able to change Email ID");
+            
+    }
+    </script>
+</head>
+
+<body link="#000000" vlink="#000000" alink="#000000" onload="javascript:err()">
+<div id="header" >
+    <a style='position: absolute; font-size: 55px; margin-left: 50px; margin-top:17px; font-family: algerian'>JForum</a>
+    <a href="../jsp/logout.jsp" class="logout_btn">Logout</a>    
+    
+    <div class="navbar">
+    <ul>
+        <li><a href="../jsp/dashboard.jsp">Home</a></li>
+               
+        <li>
+            <a href="../html/account_settings.html">Settings</a>
+            <ul>
+                <li><a href="../html/changepassword.html" style='width:200px;'>Change Password</a></li>
+                <li><a href="../jsp/userdetails.jsp" style='width:200px;'>Account Details</a></li>
+                <li><a href='../jsp/invitations.jsp' style='width:200px;'>Invitations</a></li>
+                <li><a href="changemail.html" style='width:200px;'>Change E-mail-Id</a></li>
+                <li><a href="changesq.html" style='width:200px;'>Change Security Question</a></li>
+                <li><a href="../jsp/deleteaccount.jsp" style='width:200px;'>Delete Account</a></li>
+            </ul>
+        </li>           
+        <li><a href="../jsp/viewTests.jsp">Test</a>
+            <ul>
+                <li><a href="../jsp/viewTests.jsp">Take Test</a></li>
+                <li><a href="../jsp/viewScore.jsp">View Score</a></li>
+                </ul>
+        </li>
+    </ul>
+    </div>
+    
+</div>
+<div id="sidebar">
+    <h3 class="sidebar_title">Messages</h3>
+    <ul>
+        <li><a href="../html/nmessage.html">Send New Message</a></li>
+        <li><a href="../jsp/smessages.jsp?mese=0" > Sent Messages</a></li>
+        <li><a href="../jsp/rmessages.jsp?mese=0" >Received Messages</a></li>
+    </ul>
+    <h3 class="sidebar_title">Forum</h3>
+    <ul>        
+        <li><a href="../html/createforum.html">Create New Forum</a></li>
+        <li><a href="../jsp/forum.jsp" >View Forums</a></li>
+    </ul>
+    <h3 class="sidebar_title">Group</h3>
+    <ul>
+        <li><a href="../jsp/invitations.jsp">Group Invitations</a></li>
+        <li><a href="../html/creategroup.html">Create New Group</a></li>
+        <li><a href="../jsp/group.jsp">View Groups</a></li>
+    </ul>
+</div>
+    
+    <div id="page">    
+        
+            <div id="main_partition"> 
+    <ul style="text-align:center; list-style-type:none; font-style:normal; font-family:'Comic Sans MS'; font-size:x-large">
+        <li><a href='../jsp/userdetails.jsp' style="text-decoration:none">View Account Details</a></li><hr align="center" style="color:black;  width:800px;">
+        <li><a href='changepassword.html'style="text-decoration:none">Change Password</a></li><hr align="center" style="color:black;  width:800px;">
+        <li><a href='../jsp/deleteaccount.jsp' style="text-decoration:none">Delete Account</a></li><hr align="center" style="color:black;  width:800px; ">
+        <li><a href='changesq.html' style="text-decoration:none">Change Security Question/Answer</a></li><hr align="center" style="color:black; width:800px;">
+        <li><a href='changemail.html' style="text-decoration:none">Change Email ID Associated With Account</a></li>        
+     </ul>
+        
+    </div>
+</div>
+</body>
+</html>

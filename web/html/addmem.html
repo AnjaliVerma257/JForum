@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/dashboard.css" media="all" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>
+   Dashboard
+</title>
+
+<script>
+    var x=1;
+function changeLocation() {
+          window.location.href = '../jsp/logout.jsp';
+}
+function branchsMsg() { 
+
+          window.location.href = '../jsp/smessages.jsp?mese=0';
+}
+function branchrMsg() { 
+
+          window.location.href = '../jsp/rmessages.jsp?mese=0';
+}
+function branchsToForum()
+{
+    window.location.href='../jsp/forum.jsp';
+}
+function goToAddMem()
+{
+    //document.f1.submit();
+    window.location.href='../jsp/addmem.jsp?x='+x;
+    
+}
+function branchAddmem()
+{
+   var d = document.getElementById("av");
+d.innerHTML+="<li><input type='text' name='t"+x+"' onclick='check();' onsubmit='check();' onblur='check();'><label id='tx"+x+"' style='color: #FF8A8A;'></label></li>";	
+x=x+1;
+
+}
+function check()
+{
+    var nme;
+    var lbl;
+    var a;
+    var b;
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var reg1=/([^\s])/;
+    for(i=0;i<=x;i++)
+    {
+        a="t"+i.toString();
+        b="tx"+i.toString();
+        
+        nme=document.getElementById(a);
+        lbl=document.getElementById(b);
+    if(nme.value==="" || reg1.test(nme.value)===true)
+    {
+ document.getElementById(lbl).innerHTML = "Field Cannot Be Left Blank";
+ nme.focus();
+ document.getElementById("submit").disabled=true;
+    }
+ else if (reg.test(nme.value)=== true) 
+ {
+     document.getElementById(lbl).innerHTML = "Email ID Accepted";
+ document.getElementById("submit").disabled=false;
+ }
+ else
+ {
+     document.getElementById(lbl).innerHTML = "Incorrect Email Format!!";
+     nme.focus();
+     document.getElementById("submit").disabled=true;
+   }
+}
+}
+ 
+ </script>
+</head>
+
+<body link="#000000" vlink="#000000" alink="#000000" onload="javascript:err()">
+<div id="header" >
+    <a style='position: absolute; font-size: 55px; margin-left: 50px; margin-top:17px; font-family: algerian'>JForum</a>
+    <a href="../jsp/logout.jsp" class="logout_btn">Logout</a>    
+    
+    <div class="navbar">
+    <ul>
+        <li><a href="../jsp/dashboard.jsp">Home</a></li>
+               
+        <li>
+            <a href="../html/account_settings.html">Settings</a>
+            <ul>
+                <li><a href="../html/changepassword.html" style='width:200px;'>Change Password</a></li>
+                <li><a href="../jsp/userdetails.jsp" style='width:200px;'>Account Details</a></li>
+                <li><a href='../jsp/invitations.jsp' style='width:200px;'>Invitations</a></li>
+                <li><a href="changemail.html" style='width:200px;'>Change E-mail-Id</a></li>
+                <li><a href="changesq.html" style='width:200px;'>Change Security Question</a></li>
+                <li><a href="../jsp/deleteaccount.jsp" style='width:200px;'>Delete Account</a></li>
+            </ul>
+        </li>           
+        <li><a href="../jsp/viewTests.jsp">Test</a>
+            <ul>
+                <li><a href="../jsp/viewTests.jsp">Take Test</a></li>
+                <li><a href="../jsp/viewScore.jsp">View Score</a></li>
+                </ul>
+        </li>
+    </ul>
+    </div>
+    
+</div>
+<div id="sidebar">
+    <h3 class="sidebar_title">Messages</h3>
+    <ul>
+        <li><a href="../html/nmessage.html">Send New Message</a></li>
+        <li><a href="../jsp/smessages.jsp?mese=0" > Sent Messages</a></li>
+        <li><a href="../jsp/rmessages.jsp?mese=0" >Received Messages</a></li>
+    </ul>
+    <h3 class="sidebar_title">Forum</h3>
+    <ul>        
+        <li><a href="../html/createforum.html">Create New Forum</a></li>
+        <li><a href="../jsp/forum.jsp" >View Forums</a></li>
+    </ul>
+    <h3 class="sidebar_title">Group</h3>
+    <ul>
+        <li><a href="../jsp/invitations.jsp">Group Invitations</a></li>
+        <li><a href="../html/creategroup.html">Create New Group</a></li>
+        <li><a href="../jsp/group.jsp">View Groups</a></li>
+    </ul>
+</div>
+    <div id="page"> 
+       
+        
+            <div id="main_partition"> 
+
+                <form id="rs" action="../jsp/addmem.jsp" method="post">
+                <ul id="av" style="list-style-type: upper-roman;">
+                    <li><input type="text" name="t0" id="0" onch ><label id='tx0' style='color: #FF8A8A;'></label></li>
+                </ul>
+<input type="button" name="addmem" onclick='branchAddmem();' value="Add Another Member" onclick='check();' onsubmit='check();' onblur='check();' onchange='check();'>
+<input type="submit" name="submit" value="Invite People" onclick='check();' onsubmit='check();' onblur='check();' onchange='check();'>
+</form>
+
+            </div>
+        </div>  
+</body>
+</html>

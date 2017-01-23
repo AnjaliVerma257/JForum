@@ -1,0 +1,12 @@
+SMAP
+taketest_jsp.java
+JSP
+*S JSP
+*F
++ 0 taketest.jsp
+jsp/taketest.jsp
+*L
+1,89:49
+92,32:140
+123,6:172
+*E

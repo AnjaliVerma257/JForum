@@ -1,0 +1,12 @@
+SMAP
+deleteselectedusres_jsp.java
+JSP
+*S JSP
+*F
++ 0 deleteselectedusres.jsp
+jsp/deleteselectedusres.jsp
+*L
+1,3:49
+4,18:53
+21:71
+*E

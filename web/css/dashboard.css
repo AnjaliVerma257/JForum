@@ -1,0 +1,412 @@
+body,html,ul,li {
+	margin:0;
+        font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg
+{
+	background:#282828;
+}
+
+/* ------------------------------------------------- Login Form ---------------------------------------------------------------------- */
+
+#login_box{
+	width:500px;
+	height:295px;
+	background:#000F0F;
+	position:relative;
+	margin:200px auto 0px auto;
+	border-radius:5px;
+}
+
+#login_box h3{
+	width:100%;
+	height:auto;
+	padding:5px 0px 5px 0px;
+	text-align:center;
+	background:#fff;
+	border-radius:5px 5px 0px 0px;
+}
+
+.login_field{
+	width:100%;
+	height:30px;
+	margin:5px 0px 10px 0px;
+}
+
+.login_field h2{
+	font-size:14px;
+	color:#CCCCCC;
+	display:inline-block;
+	float:left;
+	left:90px;
+	position:absolute;
+	margin-top:6px;
+}
+
+.login_field input{
+	display:inline-block;
+	float:right;
+	margin:5px 110px 0px 0px;
+	width:200px;
+	color:#666666;
+	padding-left:2px;
+}
+
+.lg_btn{
+	margin:25px 215px 0px 0px;
+	width:80px;
+	padding:3px 0px 3px 0px;
+	text-align:center;
+	border-radius:3px;
+}
+
+.forgotpassword{
+	margin:25px 25px 0px 20px;
+	color:#CCCCCC;
+	float:right;
+	font-size:13px;
+}
+
+.forgotpassword a{
+	color:#FF8A8A;
+}
+
+.register{
+	margin:25px 0px 0px 20px;
+	color:#CCCCCC;
+	float:right;
+	font-size:13px;
+}
+
+.register a{
+	color:#FF8A8A;
+}
+
+#header
+{
+width:100%;
+height:150px;
+z-index:10;
+position:absolute;
+background:#71dbd3;
+position:fixed;
+z-index:999;
+}
+
+.logout_btn{
+    float:right;
+    margin-right:30px;
+    margin-top:20px;
+    color:#000;
+    text-decoration:none;
+}
+
+.navbar{
+    width:600px;
+    height:50px;
+    margin:100px 0px 0px 225px;
+    }
+    
+.navbar ul{
+    width:100%;
+    height:50px;
+    background:#000;
+    list-style:none;
+    
+    }
+    
+.navbar ul li
+{
+    display:inline-block;
+    margin:15px 0px 0px 0px;
+}    
+
+.navbar ul li a{
+    color:#fff;
+    text-decoration:none;
+    padding:10px 15px 10px 15px;
+}
+
+.navbar ul li a:hover{
+    color:white;
+    text-decoration:none;
+    padding:10px 15px 10px 15px;
+    background:#ff3333;
+}
+
+.navbar ul li:hover ul{
+display:block;    
+}
+
+.navbar ul li ul{
+display:none;
+list-style:none;
+width:100px;
+position:absolute;
+background:transparent;
+margin:10px 0px 0px -40px;
+}
+
+.navbar ul li ul li{
+    display:block;
+    position:relative;
+    width:140px;
+    height:45px;
+    margin:0px;
+}
+
+.navbar ul li ul li a{
+    background:#666666;
+    position:absolute;
+    width:140px;
+    height:36px;
+    border-bottom:1px solid #009999;
+    padding:8px 0px 0px 10px;
+    margin-top:4px;
+}
+
+.navbar ul li ul li a:hover{
+    color:white;
+    text-decoration:none;
+    padding:8px 0px 0px 10px;
+    background:#ff3333;
+}
+
+.navbar ul li ul li:last-child a{
+    padding:8px 0px 0px 10px;
+    border:0px;
+}
+
+#sidebar
+{
+	width:210px;
+	height:100%;
+        background:#ccffcc;
+	position:fixed;
+	z-index:99;
+        border-right:1px solid #cccccc;
+        padding-top:140px;
+}
+
+.sidebar_title{
+    width:196px;
+    height:25px;
+    margin-left:6px;
+    background: #000;
+    color:#fff;
+    text-align:center;
+    font-size:16px;
+    font-weight:700;
+    padding:4px 0px 4px 0px;
+}
+
+#sidebar ul{
+ list-style:none;
+ margin-left:-20px;
+}
+
+#sidebar ul li{
+margin:5px 0px 5px 0px;    
+}
+
+#sidebar ul li a{
+ text-decoration:none;
+}
+
+#page{
+margin-left:225px;
+margin-top:165px;
+position:absolute;
+z-index:39;
+margin-bottom:20px;
+}
+
+#main_partition
+{
+width:1090px;
+height:auto;
+background:#DDD288;
+position:absolute;
+padding:10px;
+margin-bottom:20px;
+}
+
+#page .title{
+    width:100%;
+    height:50px;
+    position:relative;
+    padding:0px;
+    margin:-10px 0px 5px 0px;
+}
+
+.small_div
+{
+width:540px;
+height:auto;	
+z-index:40;
+background-color:olive;	
+position:relative;
+display:inline-block;
+float:left;
+margin:2px;
+}
+
+.small_div p{
+padding:5px;
+margin-left:20px;
+    
+}
+
+.small_div h3{
+    width:525px;
+    top:0px;
+    position:relative;
+    padding:5px 0px 5px 15px;
+    margin-top:0px;
+    height:30px;
+    background:#000;
+    color:white;
+}
+
+.small_div .msgbox{
+    width:100%;
+    height:auto;
+}
+
+.msgbox .field{
+    width:100%;
+    height:50px;
+    position:relative;
+}
+
+.msgbox .field label{
+    padding:5px;
+    float:left;
+    display:inline-block;
+    margin-left:10px;
+    font-size:13px;
+}
+
+.msgbox .field input{
+    float:right;
+    display:inline-block;
+    padding:5px;
+    width:200px;
+    margin-right:200px;
+    color:#cccccc;
+}
+
+.msgbox .field input:focus{
+    color:#000;
+}
+.msgbox .field textarea{
+    float:right;
+    display:inline-block;
+    width:390px;
+    max-width:390px;
+    margin-right:18px;
+    height:220px;
+}
+
+.msgbox .field .submit_btn{
+    margin:30px 18px 10px 0px;
+    width:120px;
+    padding:5px;
+    float:right;
+    color:#000;
+}
+
+.rcv_box .balloon{
+    background:#0000cc;
+    width:800px;
+    padding:10px 20px 10px 20px;
+    margin:20px;
+}
+
+.balloon p{
+    color:white;
+}
+
+.snt_box .balloon{
+    background:#0000cc;
+    width:800px;
+    padding:10px 20px 10px 20px;
+    margin:20px;
+}
+
+.balloon p{
+    color:white;
+}
+
+.page_rotator{
+    width:100%;
+    height:30px;
+   
+    text-align:center;
+    margin-top:60px;
+}
+
+.page_rotator a{
+    padding:5px 10px 5px 10px;
+    background:#990000;
+    text-decoration: none;
+    margin-top:5px;
+    color:white;
+    
+}
+
+.page_rotator a:hover{
+    padding:5px 10px 5px 10px;
+    background:#cccccc;
+    text-decoration: none;
+    margin-top:5px;
+    color:#333333;
+    
+}
+
+.forum_lst{
+    list-style:none;
+}
+
+.forum_lst li{
+    width:500px;
+    height:auto;
+    background:#ccc;
+    display:inline-block;
+    margin:10px;
+}
+
+.forum_lst li h3{
+    width:200px;
+    height:25px;
+    padding:5px;
+    background:#000;
+    color:white;
+    text-align:center;
+    position:relative;
+    margin-left:-5px;
+}
+
+.forum_lst li h3 a{
+    text-transform:capitalize;
+    color:white;
+    position:relative;
+    text-decoration:none;
+    width:100%;
+    height:100%;
+}
+
+.crt_desc{
+    font-size:12px;
+    margin-left:10px;
+    float:left;
+}
+.follow_desc{
+    font-size:12px;
+    float:left;
+    margin-left:10px;
+    margin-top:-14px;
+}
+.test
+{}

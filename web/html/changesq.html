@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/dashboard.css" media="all" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>
+   Change Security Answer
+</title>
+<script>
+    function checkAns(a)
+{
+    var reg=/([^\s])/;
+    if(a.value=="" || reg.test(a.value)==false)
+    {
+        document.getElementById("ans1").innerHTML = "Field Cannot Be Left Blank";
+     a.focus();
+     document.getElementById("submit").disabled=true;
+    }
+    else
+    {
+        document.getElementById("ans1").innerHTML = "Valid Answer";
+        document.getElementById("submit").disabled=false;
+    }
+}
+
+</script> 
+ 
+ 
+</head>
+
+<body link="#000000" vlink="#000000" alink="#000000" onload="javascript:err()">
+<div id="header" >
+    <a style='position: absolute; font-size: 55px; margin-left: 50px; margin-top:17px; font-family: algerian'>JForum</a>
+    <a href="../jsp/logout.jsp" class="logout_btn">Logout</a>    
+    
+    <div class="navbar">
+    <ul>
+        <li><a href="../jsp/dashboard.jsp">Home</a></li>
+               
+        <li>
+            <a href="../html/account_settings.html">Settings</a>
+            <ul>
+                <li><a href="../html/changepassword.html" style='width:200px;'>Change Password</a></li>
+                <li><a href="../jsp/userdetails.jsp" style='width:200px;'>Account Details</a></li>
+                <li><a href='../jsp/invitations.jsp' style='width:200px;'>Invitations</a></li>
+                <li><a href="changemail.html" style='width:200px;'>Change E-mail-Id</a></li>
+                <li><a href="changesq.html" style='width:200px;'>Change Security Question</a></li>
+                <li><a href="../jsp/deleteaccount.jsp" style='width:200px;'>Delete Account</a></li>
+            </ul>
+        </li>           
+        <li><a href="../jsp/viewTests.jsp">Test</a>
+            <ul>
+                <li><a href="../jsp/viewTests.jsp">Take Test</a></li>
+                <li><a href="../jsp/viewScore.jsp">View Score</a></li>
+                </ul>
+        </li>
+    </ul>
+    </div>
+    
+</div>
+<div id="sidebar">
+    <h3 class="sidebar_title">Messages</h3>
+    <ul>
+        <li><a href="../html/nmessage.html">Send New Message</a></li>
+        <li><a href="../jsp/smessages.jsp?mese=0" > Sent Messages</a></li>
+        <li><a href="../jsp/rmessages.jsp?mese=0" >Received Messages</a></li>
+    </ul>
+    <h3 class="sidebar_title">Forum</h3>
+    <ul>        
+        <li><a href="../html/createforum.html">Create New Forum</a></li>
+        <li><a href="../jsp/forum.jsp" >View Forums</a></li>
+    </ul>
+    <h3 class="sidebar_title">Group</h3>
+    <ul>
+        <li><a href="../jsp/invitations.jsp">Group Invitations</a></li>
+        <li><a href="../html/creategroup.html">Create New Group</a></li>
+        <li><a href="../jsp/group.jsp">View Groups</a></li>
+    </ul>
+</div>
+    
+
+    <div id="page">    
+        <h1>Change Security Q&A</h1>
+            <div id="main_partition">                 <form name="fi" method="post" action="../jsp/changesq.jsp">
+                    <br><br>
+                    Select a Security Question *:<select name="Security" value="pick a security question">
+<option value="pets_name">What is your first pet's name?</option>
+<option value="mothers_maiden_name">What is your mother's maiden name?</option>
+<option value="first_school">What is the name of your first school?</option>
+<option value="favorite_place">What is your favorite place?</option>
+</select><br><br>
+Enter the answer to security question *:<input type="text" name="security_ans" id='ans' onchange='checkAns(this);' onblur='checkAns(this);'  onsubmit='checkAns(this);'> <label id='ans1' style='color: #FF8A8A;'></label><br><br>
+<input type="submit" name="register" id='submit' onclick="checkAns(document.getElementById('ans'));">
+                </form>
+                <br><br><br><br>
+            </div>
+        
+        
+    </div>
+</body>
+</html>
